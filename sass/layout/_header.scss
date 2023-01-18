@@ -1,0 +1,155 @@
+header {
+  width: 100vw;
+  height: 80px;
+  background-color: #FFFFFF;
+  // background-color: aqua;
+  // font-size: xx-large;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  // border: 1px solid #000;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .ham {
+    // border: 1px solid #000;
+    position: relative;
+    height: 30px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+
+    span {
+      height: 5px;
+      width: 40px;
+      border-radius: 5px;
+      background-color: #000;
+      display: inline-block;
+      transition: all .5s ease-in-out;
+      &:nth-child(1){width:30px}
+      &:nth-child(3){width:30px;
+        align-self: flex-start;
+      }
+    }
+  }
+
+
+  .ham.selected {rotate: 1turn;
+    span {
+
+      height: 4px;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+
+
+      &:nth-child(1) {
+        transform:translate(-50% , -50%) rotate(45deg);
+
+      }
+      &:nth-child(2) {
+        width: 0;
+      }
+      &:nth-child(3) {
+        transform:translate(-50% , -50%) rotate(-45deg);
+      }
+
+    }
+
+  }
+
+  .separatore {
+    height: 40px;
+    width: 2px;
+    border-radius: 1px ;
+    margin: 0 30px;
+    background-color: #000;
+  }
+
+  .logo {
+    // border: 1px solid #000;
+    display: inline-block;
+    height: 80px;
+    display: flex;
+      
+    img {
+      // border: 1px solid #000;
+      display: inline-block;
+      height: 40px;
+      margin-top: auto;
+      margin-bottom: auto;
+      // margin-top: 10px;
+    }
+  }
+  
+
+}
+
+
+nav {
+
+  ul{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    height: 0px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    background-color: aquamarine;
+    z-index: 9;
+
+  }
+
+  ul.active {
+
+    height: 66px;
+    // background-color: aquamarine;
+  
+    li {
+      // border: 1px solid #000;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+
+      a {
+        // border: 1px solid #000;
+        height: 100%;
+        line-height: 66px;
+        padding: 0 10px;
+        color: #000;
+      }
+      
+    }
+    li:hover {
+      background-color: #09914642;
+    }
+  }
+}

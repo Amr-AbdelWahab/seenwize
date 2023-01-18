@@ -1,0 +1,32 @@
+@use "./global-rules";
+
+
+footer {
+  padding: 2rem;
+  height: 320px;
+  width: 100vw;
+  text-align: center;
+  background-color: #EEEEEE;
+  line-height: 1.5rem;
+  @extend .flexRowCenter;
+
+
+  div {
+    width: 30vw;
+    &.social img{
+      height: 40px;
+      margin: 5px;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 10px;
+    }
+  }
+
+
+}
+
