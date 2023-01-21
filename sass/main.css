@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -46,6 +47,10 @@ header {
   width: 100vw;
   height: 80px;
   background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,7 +237,13 @@ footer div p {
   margin: 10px;
 }
 
-main {
+.projLanding {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.homeLanding {
   background-image: url(../img/BG.png);
   background-position: center;
   background-size: cover;
@@ -245,10 +256,10 @@ main {
   position: relative;
   overflow: hidden;
 }
-main .overlay {
+.homeLanding .overlay {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.541);
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   z-index: 1;
 }
@@ -256,8 +267,6 @@ main .overlay {
 section {
   padding-top: 80px;
   text-align: center;
-  overflow: hidden;
-  width: 100%;
 }
 
 .cardsCont {
@@ -291,6 +300,17 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+.card.newCard::after {
+  content: "جديد";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  z-index: 100;
 }
 .card img {
   height: 291px;
