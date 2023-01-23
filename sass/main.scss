@@ -8,12 +8,16 @@
 header {
 }
 
+body {
+  width: 100vw;
+}
+
 .homeLanding {
   background-image: url(../img/BG.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 50vh;
   border: 5px solid #fff;
   border-top: none;
@@ -31,12 +35,13 @@ header {
 
 }
 
+
 section {
   // background-color: aqua;
   padding-top: 80px;
   text-align: center;
-  // overflow: hidden;
-  // width: 100%;
+  width: 100%;
+  // border: 1px solid #000;
 }
 
 .cardsCont {

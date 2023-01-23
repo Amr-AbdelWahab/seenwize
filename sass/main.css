@@ -11,7 +11,7 @@ body {
   font-family: "Alexandria", sans-serif;
 }
 
-.flexColumnCenter {
+.flexColumnCenter, .sideInfo, .sideInfo .btns-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,9 +238,56 @@ footer div p {
 }
 
 .projLanding {
-  min-height: 100vh;
+  min-height: calc(100vh - 320px);
   padding: 0;
   margin: 0;
+}
+
+.productID {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px;
+  margin-top: 120px;
+}
+
+.product img {
+  width: 300px;
+  height: 400px;
+}
+
+.sideInfo {
+  margin-right: 20px;
+  width: 400px;
+  height: 400px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.sideInfo .btns-container {
+  width: 100%;
+}
+.sideInfo .btns-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #6ED17D;
+  cursor: pointer;
+}
+.sideInfo .btns-container button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body {
+  width: 100vw;
 }
 
 .homeLanding {
@@ -248,7 +295,7 @@ footer div p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 50vh;
   border: 5px solid #fff;
   border-top: none;
@@ -267,6 +314,7 @@ footer div p {
 section {
   padding-top: 80px;
   text-align: center;
+  width: 100%;
 }
 
 .cardsCont {
