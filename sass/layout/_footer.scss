@@ -1,32 +1,56 @@
 @use "./global-rules";
+@use "./var";
 
 
 footer {
   padding: 2rem;
-  height: 320px;
+  // height: 320px;
   width: 100vw;
   text-align: center;
   background-color: #EEEEEE;
   line-height: 1.5rem;
   @extend .flexRowCenter;
-
+  align-items: flex-start;
 
   div {
+    .logoIcon { height: 35px;}
+    
     width: 30vw;
-    &.social img{
-      height: 40px;
-      margin: 5px;
-    }
+    text-align: right;
+    // border: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
 
-    h4 {
-      margin-bottom: 20px;
-    }
+    &.depart li:hover {transform: translatex(-5px);}
 
-    p {
-      margin: 10px;
-    }
+    &:nth-child(2) {text-align: center;}
+
+    &.social { width: 200px;
+        img 
+        { 
+          height: 40px; 
+          &:hover {transform: translatey( -10px);}
+        }
+        ul{  
+          @extend .flexRowCenter;
+          justify-content: space-between;
+        }
+
+      }
+
+  h4 {margin-bottom: 20px;}
+  p {margin: 10px;}
+
   }
 
+}//End Footer
 
+.floatWhatsApp {
+  // border: 1px solid #000;
 }
 
+.floatWhatsApp i {
+  font-size: 300px;
+  color: red;
+
+}

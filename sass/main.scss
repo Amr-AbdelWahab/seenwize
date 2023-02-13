@@ -65,7 +65,8 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
-  
+
+  &:hover {transform: translatey( -10px);}  
   &.newCard::after {
     content: "جديد";
     position: absolute;
