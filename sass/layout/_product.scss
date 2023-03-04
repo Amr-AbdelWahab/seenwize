@@ -7,18 +7,18 @@
   min-height: calc( 100vh - 320px);
   padding: 0;
   margin: 0;
+  margin-bottom: 120px;
+
   // border: 1px solid #000;
 }
 
 .productID {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 40px;
   margin-top: 150px;
-  margin-bottom: 120px;
-
-
+  margin-bottom: 0;
 }
 
 .product {
@@ -32,9 +32,8 @@
   }
   .slidNav{
     @extend .flexRowCenter;
-    position: absolute;
-    right: 275px;
-    transform: translateX(50%);
+    // position: relative;
+    // transform: translateX(50%);
     button {
       margin: 20px;
       width: 70px;
@@ -60,7 +59,7 @@
   margin-right: 30px;
   width: 400px;
   height: 515px;
-  @extend .flexColumnCenter;
+  @extend .flexColCenter;
   justify-content: space-between;
   // justify-content: flex-end;
 
@@ -107,7 +106,7 @@
 
 
   .btns-container {
-    @extend .flexColumnCenter;
+    @extend .flexColCenter;
     width: 100%;
     button {
       width: 100%;
@@ -124,6 +123,27 @@
         transform: scale( 1.05);
         background-color: var.$base-color;
       }
+      a {
+        color: #000;
+      }
     }
+  }
+}
+
+
+.tableSize {
+  @extend .flexColCenter;
+  h3 {
+    padding-bottom: 20px;
+  }
+
+  img {
+    width: 945px;
+    height: 215px;
+    border-radius: 20px;
+    border: 4px solid #000;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

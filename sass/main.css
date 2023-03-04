@@ -11,7 +11,7 @@ body {
   font-family: "Alexandria", sans-serif;
 }
 
-.flexColumnCenter, .sideInfo, .sideInfo .btns-container {
+.flexColCenter, .sideInfo, .sideInfo .btns-container, .tableSize {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +272,7 @@ footer div p {
   min-height: calc(100vh - 320px);
   padding: 0;
   margin: 0;
+  margin-bottom: 120px;
 }
 
 .productID {
@@ -281,12 +282,12 @@ footer div p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 40px;
   margin-top: 150px;
-  margin-bottom: 120px;
+  margin-bottom: 0;
 }
 
 .product img {
@@ -295,12 +296,6 @@ footer div p {
   border-radius: 20px;
   border: 4px solid #000;
   position: relative;
-}
-.product .slidNav {
-  position: absolute;
-  right: 275px;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
 }
 .product .slidNav button {
   margin: 20px;
@@ -385,6 +380,22 @@ footer div p {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #6ED17D;
+}
+.sideInfo .btns-container button a {
+  color: #000;
+}
+
+.tableSize h3 {
+  padding-bottom: 20px;
+}
+.tableSize img {
+  width: 945px;
+  height: 215px;
+  border-radius: 20px;
+  border: 4px solid #000;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
